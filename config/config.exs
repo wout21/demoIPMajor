@@ -20,10 +20,10 @@ config :a_demo_web,
 # Configures the endpoint
 config :a_demo_web, ADemoWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "1bYy+Y7S3vXDcRsjIOwnMJjU4S5bIsYMhiB1gUld2V+T22a7ZZDuzt+eT8t/5zNN",
+  secret_key_base: "jOHaAC/sXRZ9O9Ie7WfhQZTJvSoLUHLNz4OW2vUcXvmjr4O8emN3gF1YjkGuBFua",
   render_errors: [view: ADemoWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: ADemoWeb.PubSub, adapter: Phoenix.PubSub.PG2],
-  live_view: [signing_salt: "TZ+T+aGI"]
+  live_view: [signing_salt: "8SvKXhti"]
 
 # Configures Elixir's Logger
 config :logger, :console,

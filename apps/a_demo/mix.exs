@@ -37,7 +37,7 @@ defmodule ADemo.MixProject do
   defp deps do
     [
       {:ecto_sql, "~> 3.1"},
-      {:myxql, ">= 0.0.0"},
+      {:postgrex, ">= 0.0.0"},
       {:jason, "~> 1.0"}
     ]
   end

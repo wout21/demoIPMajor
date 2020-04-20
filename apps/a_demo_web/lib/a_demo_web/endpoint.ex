@@ -7,7 +7,7 @@ defmodule ADemoWeb.Endpoint do
   @session_options [
     store: :cookie,
     key: "_a_demo_web_key",
-    signing_salt: "c3iC20o9"
+    signing_salt: "fzpZ5paZ"
   ]
 
   socket "/socket", ADemoWeb.UserSocket,

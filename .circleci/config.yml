@@ -3,17 +3,17 @@ jobs:  # basic units of work in a run
   build:  # runs not using Workflows must have a `build` job as entry point
     parallelism: 1  # run only one instance of this job in parallel
     docker:  # run the steps with Docker
-      - image: circleci/elixir:1.7.3  # ...with this image as the primary container; this is where all `steps` will run
+      - image: circleci/elixir:1.9  # or 1.10, up to you
         environment:  # environment variables for primary container
           MIX_ENV: test
           TEST_DB_POOL_SIZE: "${TODO}"
       - image: circleci/postgres:10.1-alpine  # database image
         environment:  # environment variables for database
-          POSTGRES_USER: postgres
-          POSTGRES_DB: app_test
-          POSTGRES_PASSWORD:
+          POSTGRES_USER: r0754346
+          POSTGRES_DB: ip_major_dev
+          POSTGRES_PASSWORD: Falco123
 
-    working_directory: ~/app  # directory where steps will run
+    working_directory: ~  # directory where steps will run
 
     steps:  # commands that comprise the `build` job
       - checkout  # check out source code to working directory
@@ -56,4 +56,4 @@ jobs:  # basic units of work in a run
 
       - store_test_results:  # upload junit test results for display in Test Summary
           # Read more: https://circleci.com/docs/2.0/collect-test-data/
-          path: _build/test/lib/REPLACE_WITH_YOUR_APP_NAME # Replace with the name of your :app
+          path: _build/test/lib/a_demo_umbrella # Replace with the name of your :app
